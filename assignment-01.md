@@ -2,7 +2,7 @@
 
 # CMPS 2200 Assignment 1
 
-**Name:**_________________________
+**Name:** Basil Mustafa
 
 
 In this assignment, you will learn more about asymptotic notation, parallelism, functional languages, and algorithmic cost models. As in the recitation, some of your answer will go here and some will go in `main.py`. You are welcome to edit this `assignment-01.md` file directly, or print and fill in by hand. If you do the latter, please scan to a file `assignment-01.pdf` and push to your github repository. 
@@ -12,35 +12,35 @@ In this assignment, you will learn more about asymptotic notation, parallelism, 
 1. (2 pts ea) **Asymptotic notation** (12 pts)
 
   - 1a. Is $2^{n+1} \in O(2^n)$? Why or why not? 
-.  
+.  No because 2^n+1 over 2^n approaches 2 as n approaches infinity
 .  
 .  
 .  
 . 
   - 1b. Is $2^{2^n} \in O(2^n)$? Why or why not?     
-.  
+.   yes, because 2^n over 2^(2^n) = 0 as n approaches infinity.
 .  
 .  
 .  
 .  
   - 1c. Is $n^{1.01} \in O(\mathrm{log}^2 n)$?    
-.  
+.   yes, because n^1.01/log^2n approaches 0 as n approaches infinity. 
 .  
 .  
 .  
 
   - 1d. Is $n^{1.01} \in \Omega(\mathrm{log}^2 n)$?  
-.  
+.  Unless i'm misunderstood, I believe this is yeas for the same reason as before because big omega is simply a lower bound.
 .  
 .  
 .  
   - 1e. Is $\sqrt{n} \in O((\mathrm{log} n)^3)$?  
-.  
+.  yes, because n/n asymptotically dominates logn^3.
 .  
 .  
 .  
   - 1f. Is $\sqrt{n} \in \Omega((\mathrm{log} n)^3)$?  
-.  
+.  yes, same reason as above.
 
 
 2. **SPARC to Python** (12 pts)
@@ -61,7 +61,7 @@ $$
   - 2a. (6 pts) Translate this to Python code -- fill in the `def foo` method in `main.py`  
 
   - 2b. (6 pts) What does this function do, in your own words?  
-
+I believe it calculates the fibonacci sequence to the a specific point.
 .  
 .  
 .  
@@ -91,7 +91,7 @@ E.g., `longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3`
   - 3a. (7 pts) First, implement an iterative, sequential version of `longest_run` in `main.py`.  
 
   - 3b. (4 pts) What is the Work and Span of this implementation?  
-
+Work is 6 and span is 3.
 .  
 .  
 .  
@@ -105,7 +105,7 @@ E.g., `longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3`
 
   - 3c. (7 pts) Next, implement a `longest_run_recursive`, a recursive, divide and conquer implementation. This is analogous to our implementation of `sum_list_recursive`. To do so, you will need to think about how to combine partial solutions from each recursive call. Make use of the provided class `Result`.   
 
-  - 3d. (4 pts) What is the Work and Span of this sequential algorithm?  
+  - 3d. (4 pts) What is the Work and Span of this sequential algorithm?  2 work and 1 span
 .  
 .  
 .  
@@ -120,7 +120,7 @@ E.g., `longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3`
 
 
   - 3e. (4 pts) Assume that we parallelize in a similar way we did with `sum_list_recursive`. That is, each recursive call spawns a new thread. What is the Work and Span of this algorithm?  
-
+work and span are both 1
 .  
 .  
 .  
